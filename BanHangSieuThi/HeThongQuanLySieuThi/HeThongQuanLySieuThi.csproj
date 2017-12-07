@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80BF2D10-E16A-44F9-BD3C-BA7895DBD7F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HeThongQuanLySieuThi</RootNamespace>
+    <AssemblyName>HeThongQuanLySieuThi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\DataUlti.cs" />
+    <Compile Include="DTO\ChinhSachKhachHang.cs" />
+    <Compile Include="DTO\CT_HoaDon.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\LoaiNguoiDung.cs" />
+    <Compile Include="DTO\MatHang.cs" />
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhomPhanPhoi\frmMainPhanPhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhomPhanPhoi\frmMainPhanPhoi.Designer.cs">
+      <DependentUpon>frmMainPhanPhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhomPhanPhoi\uctPhanPhoiKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhomPhanPhoi\uctPhanPhoiKho.Designer.cs">
+      <DependentUpon>uctPhanPhoiKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhomPhanPhoi\uctPhanPhoiQuay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhomPhanPhoi\uctPhanPhoiQuay.Designer.cs">
+      <DependentUpon>uctPhanPhoiQuay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhomQuanLy\uctLoaiMatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhomQuanLy\uctLoaiMatHang.Designer.cs">
+      <DependentUpon>uctLoaiMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhomThuNgan\frmMainThuNgan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhomThuNgan\frmMainThuNgan.Designer.cs">
+      <DependentUpon>frmMainThuNgan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhomThuNgan\uctBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhomThuNgan\uctBanHang.Designer.cs">
+      <DependentUpon>uctBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhomThuNgan\uctKhachHang_ThuNgan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhomThuNgan\uctKhachHang_ThuNgan.Designer.cs">
+      <DependentUpon>uctKhachHang_ThuNgan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhomThuNgan\uctMatHang_ThuNgan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhomThuNgan\uctMatHang_ThuNgan.Designer.cs">
+      <DependentUpon>uctMatHang_ThuNgan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhomTinHoc\frmMainTinHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NhomTinHoc\frmMainTinHoc.Designer.cs">
+      <DependentUpon>frmMainTinHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\uctThongTinTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\uctThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>uctThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\NhomPhanPhoi\frmMainPhanPhoi.resx">
+      <DependentUpon>frmMainPhanPhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhomPhanPhoi\uctPhanPhoiKho.resx">
+      <DependentUpon>uctPhanPhoiKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhomPhanPhoi\uctPhanPhoiQuay.resx">
+      <DependentUpon>uctPhanPhoiQuay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhomQuanLy\uctLoaiMatHang.resx">
+      <DependentUpon>uctLoaiMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhomThuNgan\frmMainThuNgan.resx">
+      <DependentUpon>frmMainThuNgan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhomThuNgan\uctBanHang.resx">
+      <DependentUpon>uctBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhomThuNgan\uctKhachHang_ThuNgan.resx">
+      <DependentUpon>uctKhachHang_ThuNgan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhomThuNgan\uctMatHang_ThuNgan.resx">
+      <DependentUpon>uctMatHang_ThuNgan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\uctThongTinTaiKhoan.resx">
+      <DependentUpon>uctThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
